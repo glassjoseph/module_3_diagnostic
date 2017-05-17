@@ -10,11 +10,24 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'database_cleaner'
+gem 'figaro'
+gem 'faraday'
+
+
 group :development, :test do
   gem 'byebug'
+  gem 'pry'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
 end
 
+group :test do
+  gem 'vcr'
+  gem 'webmock'
+  gem 'capybara'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
