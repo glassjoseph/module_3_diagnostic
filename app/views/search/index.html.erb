@@ -1,0 +1,10 @@
+<% @stations.each do |station| %>
+<ul>
+  <li> Name: <%= station.name %> </li>
+  <li> Address: <%= station.address %> </li>
+  <li> Fuel Types: <%= station.fuel_types %> </li>
+  <li> Distance: <%= station.distance %> </li>
+  <li> Access Times: <%=station.access_days_time %> </li>
+</ul>
+<br>
+<% end %>
