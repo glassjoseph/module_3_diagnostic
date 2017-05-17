@@ -29,8 +29,7 @@ ActiveRecord::Migration.maintain_test_schema!
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   config.hook_into :webmock
-  config.filter_sensitive_data('<YOUR_API_KEY>') { ENV['whatever_api_key'] }
-  config.filter_sensitive_data('<YOUR_CLIENT_KEY>') { ENV['whatever_client_key'] }
+  config.filter_sensitive_data('<NREL_API_KEY>') { ENV['nrel_api_key'] }
 end
 
 
