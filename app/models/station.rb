@@ -3,7 +3,7 @@ class Station < ActiveRecord::Base
 
   def self.create_stations(response)
     response[:fuel_stations].each do |station|
-      Station.create(name: station[:station_name],
+      Station.find_or_create_by(name: station[:station_name],
                    address: "#{station[:street_address]}, #{station[:city]}, #{station[:state]}, #{station[:zip]}",
                    fuel_types: station[:fuel_type_code],
                    distance: station[:distance],
